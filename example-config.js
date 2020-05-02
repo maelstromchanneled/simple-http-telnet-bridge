@@ -10,43 +10,40 @@
   ],
   "accessories": [
     {
-      "accessory": "HTTP-SWITCH", "name": "Mute", "switchType": "stateful", "pullInterval" : 3000,
-      "onUrl":     "http://localhost:8000/?192.168.0.106|0.1|MUON",
-      "offUrl":    "http://localhost:8000/?192.168.0.106|0.1|MUOFF",
-      "statusUrl": "http://localhost:8000/?192.168.0.106|0.2|MU?",
-      "statusPattern": "MUON"
+      "accessory": "HTTP-DIMMER", "name": "Volume",
+      "onUrl":            "http://localhost:8000/?192.168.0.106|0.1|MUOFF",
+      "offUrl":           "http://localhost:8000/?192.168.0.106|0.1|MUON",
+      "statusUrl":        "http://localhost:8000/?192.168.0.106|0.2|MU?|.*MU(\\S+).*|OFF",
+      "setBrightnessUrl": "http://localhost:8000/?192.168.0.106|0.1|MV",
+      "getBrightnessUrl": "http://localhost:8000/?192.168.0.106|0.2|MV?|.*MV(\\d\\d).*"
     }   
     ,
     {
       "accessory": "HTTP-SWITCH", "name": "FireTV", "switchType": "stateful", "pullInterval" : 3000,
       "onUrl":     "http://localhost:8000/?192.168.0.106|0.1|SISAT/CBL",
       "offUrl":    "http://localhost:8000/?192.168.0.106|0.1|SISAT/CBL",
-      "statusUrl": "http://localhost:8000/?192.168.0.106|0.2|SI?",
-      "statusPattern": "SISAT/CBL"
+      "statusUrl": "http://localhost:8000/?192.168.0.106|0.2|SI?|.*SI(\\S+).*|SAT/CBL"
     }   
     ,
     {
       "accessory": "HTTP-SWITCH", "name": "Wii", "switchType": "stateful", "pullInterval" : 3000,
       "onUrl":     "http://localhost:8000/?192.168.0.106|0.1|SIGAME",
       "offUrl":    "http://localhost:8000/?192.168.0.106|0.1|SISAT/CBL",
-      "statusUrl": "http://localhost:8000/?192.168.0.106|0.2|SI?",
-      "statusPattern": "SIGAME"
+      "statusUrl": "http://localhost:8000/?192.168.0.106|0.2|SI?|.*SI(\\S+).*|GAME"
     }   
     ,
     {
       "accessory": "HTTP-SWITCH", "name": "XBox", "switchType": "stateful", "pullInterval" : 3000,
       "onUrl":     "http://localhost:8000/?192.168.0.106|0.1|SIMPLAY",
       "offUrl":    "http://localhost:8000/?192.168.0.106|0.1|SISAT/CBL",
-      "statusUrl": "http://localhost:8000/?192.168.0.106|0.2|SI?",
-      "statusPattern": "SIMPLAY"
+      "statusUrl": "http://localhost:8000/?192.168.0.106|0.2|SI?|.*SI(\\S+).*|MPLAY"
     }   
     ,
     {
       "accessory": "HTTP-SWITCH", "name": "AppleTV", "switchType": "stateful", "pullInterval" : 3000,
       "onUrl":     "http://localhost:8000/?192.168.0.106|0.1|SIAUX2",
       "offUrl":    "http://localhost:8000/?192.168.0.106|0.1|SISAT/CBL",
-      "statusUrl": "http://localhost:8000/?192.168.0.106|0.2|SI?",
-      "statusPattern": "SIAUX2"
+      "statusUrl": "http://localhost:8000/?192.168.0.106|0.2|SI?|.*SI(\\S+).*|AUX2"
     }   
     ,
     {
